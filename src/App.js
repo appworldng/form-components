@@ -1,5 +1,5 @@
 import React from "react";
-import Toggle from "./components/toggle/Toggle";
+import Toggle from "./components/toggle/";
 
 const section = {
   padding: "4em",
