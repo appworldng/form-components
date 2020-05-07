@@ -1,8 +1,6 @@
 # form-components
 
-A list of custom react form components of mine hosted on bit.dev.
-
-You can install any of the form-components directly via NPM to your project folder. For exampple, you can install the toggle component as a package:
+A list of custom react form components of mine hosted on bit.dev. You can install any of the form-components directly via NPM to your project folder. For exampple, you can install the toggle component as a package:
 
 ```
 npm i @bit/chigozieorunta.form-components.toggle
