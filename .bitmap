@@ -47,7 +47,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "chigozieorunta.form-components/toggle@1.0.2": {
+    "chigozieorunta.form-components/toggle@1.0.5": {
         "files": [
             {
                 "relativePath": "src/components/toggle/README.md",
