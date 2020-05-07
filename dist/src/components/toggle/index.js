@@ -29,14 +29,41 @@ var toggleOff = {
   width: 40,
   height: 20,
   borderRadius: 100,
-  backgroundColor: "#D1D1D1"
+  backgroundColor: "#D1D1D1",
+  display: "inline-block",
+  transition: "all 0.3s",
+  position: "relative"
 };
 var toggleOn = {
   width: 40,
   height: 20,
   borderRadius: 100,
-  backgroundColor: "#F00"
+  backgroundColor: "#F00",
+  display: "inline-block",
+  transition: "all 0.3s",
+  position: "relative"
 };
+var toggleChildOff = {
+  width: 16,
+  height: 16,
+  borderRadius: "100%",
+  position: "absolute",
+  top: 2,
+  left: 2,
+  transition: "all 0.3s",
+  backgroundColor: "#FFF"
+};
+var toggleChildOn = {
+  width: 16,
+  height: 16,
+  borderRadius: "100%",
+  position: "absolute",
+  top: 2,
+  left: 22,
+  transition: "all 0.3s",
+  backgroundColor: "#FFF"
+};
+var bool = true;
 
 var Toggle = function Toggle() {
   var _useState = (0, _react.useState)(toggleOff),
@@ -44,14 +71,29 @@ var Toggle = function Toggle() {
       toggleState = _useState2[0],
       setToggleState = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(toggleChildOff),
+      _useState4 = _slicedToArray(_useState3, 2),
+      toggleChildState = _useState4[0],
+      setToggleChildState = _useState4[1];
+
   var toggleControl = function toggleControl() {
-    setToggleState(toggleOn);
+    if (bool) {
+      setToggleState(toggleOn);
+      setToggleChildState(toggleChildOn);
+    } else {
+      setToggleState(toggleOff);
+      setToggleChildState(toggleChildOff);
+    }
+
+    bool = !bool;
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     style: toggleState,
     onClick: toggleControl
-  }), /*#__PURE__*/_react.default.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    style: toggleChildState
+  })), /*#__PURE__*/_react.default.createElement("input", {
     type: "hidden"
   }));
 };
