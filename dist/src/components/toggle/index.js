@@ -25,6 +25,13 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+/**
+ * @name Toggle
+ * @description A simple toggle control that is easily customizable.
+ * @param {string} props.color Color for the toggle: defaults to #D1D1D1.
+ * @param {function} props.onToggle onclick event function of the button: receives the state `Boolean` of the toggle as an argument.
+ * @returns {JSX.Element} A toggle control.
+ */
 var toggleOff = {
   width: 40,
   height: 20,
