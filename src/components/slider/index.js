@@ -9,7 +9,7 @@ import React, { useState } from "react";
  */
 
 const sliderInActive = {
-  width: 200,
+  width: 100,
   height: 5,
   borderRadius: 100,
   backgroundColor: "#D1D1D1",
@@ -19,7 +19,7 @@ const sliderInActive = {
 };
 
 const sliderActive = {
-  width: 200,
+  width: 100,
   height: 5,
   borderRadius: 100,
   backgroundColor: "#F00",
