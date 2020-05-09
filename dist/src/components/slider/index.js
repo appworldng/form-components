@@ -33,7 +33,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  * @returns {JSX.Element} A slider control.
  */
 var sliderInActive = {
-  width: 200,
+  width: 100,
   height: 5,
   borderRadius: 100,
   backgroundColor: "#D1D1D1",
@@ -42,7 +42,7 @@ var sliderInActive = {
   position: "relative"
 };
 var sliderActive = {
-  width: 200,
+  width: 100,
   height: 5,
   borderRadius: 100,
   backgroundColor: "#F00",
