@@ -4,7 +4,7 @@ import React, { useState } from "react";
  * @name Slider
  * @description A simple slider control that is easily customizable.
  * @param {string} props.color Color for the slider: defaults to #D1D1D1.
- * @param {function} props.onSlider onclick event function of the button: receives the state `Boolean` of the slider as an argument.
+ * @param {function} props.onSlide onclick event function of the button: receives the state `Boolean` of the slider as an argument.
  * @returns {JSX.Element} A slider control.
  */
 
@@ -55,7 +55,7 @@ const Slider = () => {
   return (
     <>
       <div style={sliderState}>
-        <div style={sliderChild} onDrag={sliderControl}></div>
+        <div draggable="true" style={sliderChild} onDrag={sliderControl}></div>
       </div>
       <input type="hidden" />
     </>
