@@ -45,11 +45,7 @@ const Slider = () => {
 
   const sliderControl = (event) => {
     event.preventDefault();
-    if (1) {
-      setSliderState(sliderActive);
-    } else {
-      setSliderState(sliderInActive);
-    }
+    console.log("It's here...");
   };
 
   return (
