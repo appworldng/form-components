@@ -1,6 +1,7 @@
 import React from "react";
 import Toggle from "./components/toggle/";
 import Slider from "./components/slider/";
+import Knob from "./components/knob/";
 
 const section = {
   padding: "4em",
@@ -13,6 +14,8 @@ const App = () => {
       <Toggle />
       <br />
       <Slider />
+      <br />
+      <Knob />
     </section>
   );
 };
