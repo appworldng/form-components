@@ -29,7 +29,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  * @name Slider
  * @description A simple slider control that is easily customizable.
  * @param {string} props.color Color for the slider: defaults to #D1D1D1.
- * @param {function} props.onSlider onclick event function of the button: receives the state `Boolean` of the slider as an argument.
+ * @param {function} props.onSlide onclick event function of the button: receives the state `Boolean` of the slider as an argument.
  * @returns {JSX.Element} A slider control.
  */
 var sliderInActive = {
@@ -70,17 +70,13 @@ var Slider = function Slider() {
 
   var sliderControl = function sliderControl(event) {
     event.preventDefault();
-
-    if (1) {
-      setSliderState(sliderActive);
-    } else {
-      setSliderState(sliderInActive);
-    }
+    console.log("It's here...");
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     style: sliderState
   }, /*#__PURE__*/_react.default.createElement("div", {
+    draggable: "true",
     style: sliderChild,
     onDrag: sliderControl
   })), /*#__PURE__*/_react.default.createElement("input", {
