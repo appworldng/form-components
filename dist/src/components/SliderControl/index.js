@@ -26,7 +26,7 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /**
- * @name Slider
+ * @name SliderControl
  * @description A simple slider control that is easily customizable.
  * @param {string} props.color Color for the slider: defaults to #D1D1D1.
  * @param {function} props.onSlide onclick event function of the button: receives the state `Boolean` of the slider as an argument.
@@ -62,7 +62,7 @@ var sliderChild = {
   boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)"
 };
 
-var Slider = function Slider() {
+var SliderControl = function SliderControl() {
   var _useState = (0, _react.useState)(sliderInActive),
       _useState2 = _slicedToArray(_useState, 2),
       sliderState = _useState2[0],
@@ -84,7 +84,7 @@ var Slider = function Slider() {
   }));
 };
 
-var _default = Slider;
+var _default = SliderControl;
 exports.default = _default;
 
 //# sourceMappingURL=index.js.map

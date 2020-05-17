@@ -26,86 +26,65 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /**
- * @name Toggle
- * @description A simple toggle control that is easily customizable.
- * @param {string} props.color Color for the toggle: defaults to #D1D1D1.
- * @param {function} props.onToggle onclick event function of the button: receives the state `Boolean` of the toggle as an argument.
- * @returns {JSX.Element} A toggle control.
+ * @name KnobControl
+ * @description A simple Knob control that is easily customizable.
+ * @param {string} props.color Color for the Knob: defaults to #D1D1D1.
+ * @param {function} props.onSlide onclick event function of the button: receives the state `Boolean` of the Knob as an argument.
+ * @returns {JSX.Element} A Knob control.
  */
-var toggleOff = {
-  width: 40,
-  height: 20,
-  borderRadius: 100,
-  backgroundColor: "#D1D1D1",
+var KnobInActive = {
+  width: 100,
+  height: 100,
+  borderRadius: "100%",
+  border: "5px solid #D1D1D1",
   display: "inline-block",
   transition: "all 0.3s",
   position: "relative"
 };
-var toggleOn = {
-  width: 40,
-  height: 20,
-  borderRadius: 100,
-  backgroundColor: "#F00",
+var KnobActive = {
+  width: 100,
+  height: 100,
+  borderRadius: "100%",
+  border: "5px solid #F00",
   display: "inline-block",
   transition: "all 0.3s",
   position: "relative"
 };
-var toggleChildOff = {
+var KnobChild = {
   width: 16,
   height: 16,
   borderRadius: "100%",
   position: "absolute",
-  top: 2,
-  left: 2,
+  bottom: -10.5,
+  left: 42,
   transition: "all 0.3s",
-  backgroundColor: "#FFF"
+  backgroundColor: "#FFF",
+  boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)"
 };
-var toggleChildOn = {
-  width: 16,
-  height: 16,
-  borderRadius: "100%",
-  position: "absolute",
-  top: 2,
-  left: 22,
-  transition: "all 0.3s",
-  backgroundColor: "#FFF"
-};
-var bool = true;
 
-var Toggle = function Toggle() {
-  var _useState = (0, _react.useState)(toggleOff),
+var KnobControl = function KnobControl() {
+  var _useState = (0, _react.useState)(KnobInActive),
       _useState2 = _slicedToArray(_useState, 2),
-      toggleState = _useState2[0],
-      setToggleState = _useState2[1];
+      KnobState = _useState2[0],
+      setKnobState = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(toggleChildOff),
-      _useState4 = _slicedToArray(_useState3, 2),
-      toggleChildState = _useState4[0],
-      setToggleChildState = _useState4[1];
-
-  var toggleControl = function toggleControl() {
-    if (bool) {
-      setToggleState(toggleOn);
-      setToggleChildState(toggleChildOn);
-    } else {
-      setToggleState(toggleOff);
-      setToggleChildState(toggleChildOff);
-    }
-
-    bool = !bool;
+  var KnobControl = function KnobControl(event) {
+    event.preventDefault();
+    console.log("It's here...");
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    style: toggleState,
-    onClick: toggleControl
+    style: KnobState
   }, /*#__PURE__*/_react.default.createElement("div", {
-    style: toggleChildState
+    draggable: "true",
+    style: KnobChild,
+    onDrag: KnobControl
   })), /*#__PURE__*/_react.default.createElement("input", {
     type: "hidden"
   }));
 };
 
-var _default = Toggle;
+var _default = KnobControl;
 exports.default = _default;
 
 //# sourceMappingURL=index.js.map
