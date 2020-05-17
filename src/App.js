@@ -1,7 +1,7 @@
 import React from "react";
-import Toggle from "./components/toggle/";
-import Slider from "./components/slider/";
-import Knob from "./components/knob/";
+import ToggleControl from "./components/ToggleControl/";
+import SliderControl from "./components/SliderControl/";
+import KnobControl from "./components/KnobControl/";
 
 const section = {
   padding: "4em",
@@ -11,11 +11,11 @@ const section = {
 const App = () => {
   return (
     <section style={section}>
-      <Toggle />
+      <ToggleControl />
       <br />
-      <Slider />
+      <SliderControl />
       <br />
-      <Knob />
+      <KnobControl />
     </section>
   );
 };
