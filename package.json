@@ -37,5 +37,8 @@
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "yarn"
+  },
+  "dependencies": {
+    "acorn": "7.1.1"
   }
 }
