@@ -25,7 +25,7 @@ function App() {
           <KnobControl />
         </div>
         <div>
-          <SmartTextControl />
+          <SmartTextControl shape="round" />
         </div>
       </section>
     </>
